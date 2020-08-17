@@ -35,7 +35,7 @@ public class ListProblem {
 					break;
 				}
 			}
-			if (count == 5) {
+			if (count == list.size()) {
 				System.out.println("Максимальное значение равно" + " " + list.get(i));
 				break;
 			} else {
@@ -54,7 +54,7 @@ public class ListProblem {
 					break;
 				}
 			}
-			if (count1 == 5) {
+			if (count1 == list.size()) {
 				System.out.println("Минимальное значение равно" + " " + list.get(i));
 				break;
 			} else {
