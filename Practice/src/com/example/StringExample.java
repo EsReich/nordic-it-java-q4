@@ -45,6 +45,11 @@ public class StringExample {
 		System.out.println(s.replace("П", "Т"));
 		System.out.println(s.replace('П', 'Т'));
 		System.out.println(s.replace("Привет", "Пока"));
+		
+		var str = "Демонстрационная строка";
+		System.out.println(str.substring(0, str.length() / 2));
+		//stringName.substring(int beginIndex, int endIndex) -- возвращает соответствующий...
+		//...кусок строки;
 	}
 
 }
