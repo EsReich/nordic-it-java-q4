@@ -12,7 +12,7 @@ public class Frame {
 		var lengthOfFrame = in.nextInt();
 		var stringLine = in.next();
 
-		if ((lengthOfFrame - 2) < stringLine.length()) {
+		if ((lengthOfFrame - 2) < stringLine.length() || widthOfFrame < 3) {
 			System.out.println("Ошибка");
 		} else {
 
