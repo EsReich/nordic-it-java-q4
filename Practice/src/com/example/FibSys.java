@@ -18,7 +18,6 @@ public class FibSys {
 	}
 	
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
 
 		var in = new Scanner(System.in);
 		var input = in.nextLong();
@@ -33,16 +32,16 @@ public class FibSys {
 		var arr = new int[index];
 		arr[0] = 1;
 
-		var i = 2;
+		var counter1 = 2;
 		
-		while (input != 0 && i <= arr.length) {
-			var j = 1;
-			while (seq(j + 1) <= input) {
-				j++;
+		while (input != 0 && counter1 <= arr.length) {
+			var counter2 = 1;
+			while (seq(counter2 + 1) <= input) {
+				counter2++;
 			}
-			i = j;
-			arr[arr.length - j] = 1;
-			input -= seq(j);
+			counter1 = counter2;
+			arr[arr.length - counter2] = 1;
+			input -= seq(counter2);
 		}
 		
 		for (var k = 0; k < arr.length; k++) {       

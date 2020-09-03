@@ -48,29 +48,33 @@ public class Elefant {
 		return homeland;
 	}
 	
-	public float getLengthOfEar() {
-		return lengthOfEar;
-	}
-
 	public void setLengthOfEar(float lengthOfEar) {
 		this.lengthOfEar = lengthOfEar;
 	}
-
+	
+	public float getLengthOfEar() {
+		return lengthOfEar;
+	}
+	
+	public void setWidthOfEar(float widthOfEar) {
+		this.widthOfEar = widthOfEar;
+	}	
+	
 	public float getWidthOfEar() {
 		return widthOfEar;
 	}
 
-	public void setWidthOfEar(float widthOfEar) {
-		this.widthOfEar = widthOfEar;
-	}
-
+	public void setMass(float mass) {
+		this.mass = mass;
+	}	
+	
 	public float getMass() {
 		return mass;
 	}
-
-	public void setMass(float mass) {
-		this.mass = mass;
-	}
+		
+	public void setWise(boolean isWise) {
+		this.isWise = isWise;
+	}	
 	
 	public boolean isWise() {
 		return isWise;

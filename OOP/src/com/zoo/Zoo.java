@@ -11,16 +11,15 @@ import com.zoo.animals.Wolf;
 public class Zoo {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-		
+
 		var wolf = new Wolf();
 		var tiger = new Tiger();
 		var lion = new Lion();
-		var giraffe = new Giraffe();
-		var elefant = new Elefant();
+		var giraf = new Giraffe();
+		var elef = new Elefant();
 		var eagle = new Eagle();
-		var chimpanzee = new Chimpanzee();
-
+		var chim = new Chimpanzee();
+		
 	}
 
 }
