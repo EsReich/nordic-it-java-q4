@@ -11,6 +11,9 @@ public class DoubleExample {
 		System.out.println(a);
 		System.out.println(b);
 		System.out.println(Math.abs(a - b) < eps);
+		
+		System.out.println("=====================");
+	
 	}
 
 }
