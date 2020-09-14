@@ -1,52 +1,71 @@
 package com.zoo.animals;
 
-public class Elefant {
+public class Elefant extends Animal implements DreamFlyable, Wiseable {
 
-	private String name;
-	private int dateOfBirth;
-	private int currentDate;
-	private String homeland;
+//	private String name;
+//	private int dateOfBirth;
+//	private int currentDate;
+//	private String homeland;
 	private float lengthOfEar;
 	private float widthOfEar;
-	private float mass;
+	private float mass;  // в кг;
 	private boolean isWise;
 	
 	
-	public void setName(String name) {
-		this.name = name;
+	public Elefant() {
+		super();
 	}
 	
-	public String getName() {
-		return name;
+	public Elefant(String name, int dateOfBirth, int currentDate, String homeland, 
+			float lengthOfEar, float widthOfEar, float mass, boolean isWise) {
+		super(name, dateOfBirth, currentDate, homeland);
+//		this.name = name;
+//		this.dateOfBirth = dateOfBirth;
+//		this.currentDate = currentDate;
+//		this.homeland = homeland;
+		this.lengthOfEar = lengthOfEar;
+		this.widthOfEar = widthOfEar;
+		this.mass = mass;
+		this.isWise = isWise;
 	}
+	
 	
 	public void say() {
 		System.out.println(this.name + ": \"Doo-dee-doo!\"");
 	}
 	
-	public void setDateOfBirth(int dateOfBirth) {
-		this.dateOfBirth = dateOfBirth;
-	}
 	
-	public int getDateOfBirth() {
-		return dateOfBirth;
-	}
+//	public void setName(String name) {
+//		this.name = name;
+//	}
+//	
+//	public String getName() {
+//		return name;
+//	}
 	
-	public void setCurrentDate(int currentDate) {
-		this.currentDate = currentDate;
-	}
+//	public void setDateOfBirth(int dateOfBirth) {
+//		this.dateOfBirth = dateOfBirth;
+//	}
+//	
+//	public int getDateOfBirth() {
+//		return dateOfBirth;
+//	}
 	
-	public int getCurrentDate() {
-		return currentDate;
-	}
+//	public void setCurrentDate(int currentDate) {
+//		this.currentDate = currentDate;
+//	}
+//	
+//	public int getCurrentDate() {
+//		return currentDate;
+//	}
 	
-	public void setHomeland(String homeland) {
-		this.homeland = homeland;
-	}
-	
-	public String getHomeland() {
-		return homeland;
-	}
+//	public void setHomeland(String homeland) {
+//		this.homeland = homeland;
+//	}
+//	
+//	public String getHomeland() {
+//		return homeland;
+//	}
 	
 	public void setLengthOfEar(float lengthOfEar) {
 		this.lengthOfEar = lengthOfEar;

@@ -2,49 +2,65 @@ package com.zoo.animals;
 
 import java.util.Random;
 
-public class Giraffe {
+import com.zoo.exception.UnnamedAnimalException;
 
-	private String name;
-	private int dateOfBirth;
-	private int currentDate;
-	private String homeland;
+public class Giraffe extends Animal implements Declaimable, Countable {
+
+//	private String name;
+//	private int dateOfBirth;
+//	private int currentDate;
+//	private String homeland;
 	
 	
-	public void setName(String name) {
-		this.name = name;
+	public Giraffe() {
+		super();
+	}
+
+	public Giraffe(String name, int dateOfBirth, int currentDate, String homeland) {
+		super(name, dateOfBirth, currentDate, homeland);
+//		this.name = name;
+//		this.dateOfBirth = dateOfBirth;
+//		this.currentDate = currentDate;
+//		this.homeland = homeland;
 	}
 	
-	public String getName() {
-		return name;
-	}
 	
 	public void say() {
 		System.out.println(this.name + ": \"Ehh, sorry?\"");
 	}
 	
-	public void setDateOfBirth(int dateOfBirth) {
-		this.dateOfBirth = dateOfBirth;
-	}
 	
-	public int getDateOfBirth() {
-		return dateOfBirth;
-	}
+//	public void setName(String name) {
+//		this.name = name;
+//	}
+//	
+//	public String getName() {
+//		return name;
+//	}
 	
-	public void setCurrentDate(int currentDate) {
-		this.currentDate = currentDate;
-	}
+//	public void setDateOfBirth(int dateOfBirth) {
+//		this.dateOfBirth = dateOfBirth;
+//	}
+//	
+//	public int getDateOfBirth() {
+//		return dateOfBirth;
+//	}
 	
-	public int getCurrentDate() {
-		return currentDate;
-	}
+//	public void setCurrentDate(int currentDate) {
+//		this.currentDate = currentDate;
+//	}
+//	
+//	public int getCurrentDate() {
+//		return currentDate;
+//	}
 	
-	public void setHomeland(String homeland) {
-		this.homeland = homeland;
-	}
-	
-	public String getHomeland() {
-		return homeland;
-	}
+//	public void setHomeland(String homeland) {
+//		this.homeland = homeland;
+//	}
+//	
+//	public String getHomeland() {
+//		return homeland;
+//	}
 	
 	
 	public void announceAge() {
@@ -119,13 +135,13 @@ public class Giraffe {
 
 	}
 	
-	public void count() {
+	public void count() throws UnnamedAnimalException {
 		
 		if (this.name != null) {
 			System.out.println(this.name + " посчитал длину своего имени: "
 				+ "она составляет " + this.name.length() + " символов.");
 		} else {
-			System.out.println("Owibka pri o4ictka");
+			throw new UnnamedAnimalException("Животное должно иметь имя!");
 		}
 	
 	}

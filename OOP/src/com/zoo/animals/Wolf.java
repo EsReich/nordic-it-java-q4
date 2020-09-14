@@ -1,49 +1,64 @@
 package com.zoo.animals;
 
-public class Wolf {
+public class Wolf extends Animal implements Sleepable, Runable {
 
-	private String name;
-	private int dateOfBirth;
-	private int currentDate;
-	private String homeland;
+//	private String name;
+//	private int dateOfBirth;
+//	private int currentDate;
+//	private String homeland;
 	private int hoursOfSleep;
 	
 	
-	public void setName(String name) {
-		this.name = name;
+	public Wolf() {
+		super();
 	}
 	
-	public String getName() {
-		return name;
+	public Wolf(String name, int dateOfBirth, int currentDate, String homeland, int hoursOfSleep) {
+		super(name, dateOfBirth, currentDate, homeland);
+//		this.name = name;
+//		this.dateOfBirth = dateOfBirth;
+//		this.currentDate = currentDate;
+//		this.homeland = homeland;
+		this.hoursOfSleep = hoursOfSleep;
 	}
+	
 	
 	public void say() {
 		System.out.println(this.name + ": \"Woof-woof!\"");
 	}
 	
-	public void setDateOfBirth(int dateOfBirth) {
-		this.dateOfBirth = dateOfBirth;
-	}
 	
-	public int getDateOfBirth() {
-		return dateOfBirth;
-	}
+//	public void setName(String name) {
+//		this.name = name;
+//	}
+//	
+//	public String getName() {
+//		return name;
+//	}
 	
-	public void setCurrentDate(int currentDate) {
-		this.currentDate = currentDate;
-	}
+//	public void setDateOfBirth(int dateOfBirth) {
+//		this.dateOfBirth = dateOfBirth;
+//	}
+//	
+//	public int getDateOfBirth() {
+//		return dateOfBirth;
+//	}
 	
-	public int getCurrentDate() {
-		return currentDate;
-	}
+//	public void setCurrentDate(int currentDate) {
+//		this.currentDate = currentDate;
+//	}
+//	
+//	public int getCurrentDate() {
+//		return currentDate;
+//	}
 	
-	public void setHomeland(String homeland) {
-		this.homeland = homeland;
-	}
-	
-	public String getHomeland() {
-		return homeland;
-	}
+//	public void setHomeland(String homeland) {
+//		this.homeland = homeland;
+//	}
+//	
+//	public String getHomeland() {
+//		return homeland;
+//	}
 	
 	public void setHoursOfSleep(int hoursOfSleep) {
 		this.hoursOfSleep = hoursOfSleep;

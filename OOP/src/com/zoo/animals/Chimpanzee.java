@@ -1,51 +1,69 @@
 package com.zoo.animals;
 
-public class Chimpanzee {
+public class Chimpanzee extends Animal implements BmIable, Dreamable {
 	
-	private String name;
-	private int dateOfBirth;
-	private int currentDate;
-	private String homeland;
+//	private String name;
+//	private int dateOfBirth;
+//	private int currentDate;
+//	private String homeland;
 	private float height;     // в метрах;
 	private float mass;       // в кг;
 	private boolean isClever;
 
-	
-	public void setName(String name) {
-		this.name = name;
+
+	public Chimpanzee() {
+		super();
 	}
 	
-	public String getName() {
-		return name;
+	public Chimpanzee(String name, int dateOfBirth, int currentDate, String homeland, 
+			float height, float mass, boolean isClever) {
+		super(name, dateOfBirth, currentDate, homeland);
+//		this.name = name;
+//		this.dateOfBirth = dateOfBirth;
+//		this.currentDate = currentDate;
+//		this.homeland = homeland;
+		this.height = height;
+		this.mass = mass;
+		this.isClever = isClever;
 	}
+	
 	
 	public void say() {
 		System.out.println(this.name + ": \"Hello, my dears!\"");
 	}
 	
-	public void setDateOfBirth(int dateOfBirth) {
-		this.dateOfBirth = dateOfBirth;
-	}
 	
-	public int getDateOfBirth() {
-		return dateOfBirth;
-	}
+//	public void setName(String name) {
+//		this.name = name;
+//	}
+//	
+//	public String getName() {
+//		return name;
+//	}
 	
-	public void setCurrentDate(int currentDate) {
-		this.currentDate = currentDate;
-	}
+//	public void setDateOfBirth(int dateOfBirth) {
+//		this.dateOfBirth = dateOfBirth;
+//	}
+//	
+//	public int getDateOfBirth() {
+//		return dateOfBirth;
+//	}
 	
-	public int getCurrentDate() {
-		return currentDate;
-	}
+//	public void setCurrentDate(int currentDate) {
+//		this.currentDate = currentDate;
+//	}
+//	
+//	public int getCurrentDate() {
+//		return currentDate;
+//	}
 	
-	public void setHomeland(String homeland) {
-		this.homeland = homeland;
-	}
-	
-	public String getHomeland() {
-		return homeland;
-	}
+//	public void setHomeland(String homeland) {
+//		this.homeland = homeland;
+//	}
+//	
+//	public String getHomeland() {
+//		return homeland;
+//	}
 	
 	public void setHeight(float height) {
 		this.height = height;
@@ -80,7 +98,7 @@ public class Chimpanzee {
 		System.out.println(this.name + " прибыл из " + this.homeland);
 	}
 	
-	public void bMI() {
+	public void bmI() {
 		
 		float bodyMassIndex = this.mass / (this.height * this.height);
 		

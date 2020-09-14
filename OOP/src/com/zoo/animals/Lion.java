@@ -1,49 +1,66 @@
 package com.zoo.animals;
 
-public class Lion {
+import com.zoo.exception.NegativeValueException;
+
+public class Lion extends Animal implements Eatable, Copulateable {
 	
-	private String name;
-	private int dateOfBirth;
-	private int currentDate;
-	private String homeland;
+//	private String name;
+//	private int dateOfBirth;
+//	private int currentDate;
+//	private String homeland;
 	private int meatEaten;
 	
 	
-	public void setName(String name) {
-		this.name = name;
+	public Lion() {
+		super();
 	}
 	
-	public String getName() {
-		return name;
+	public Lion(String name, int dateOfBirth, int currentDate, String homeland, int meatEaten) {
+		super(name, dateOfBirth, currentDate, homeland);
+//		this.name = name;
+//		this.dateOfBirth = dateOfBirth;
+//		this.currentDate = currentDate;
+//		this.homeland = homeland;
+		this.meatEaten = meatEaten;
 	}
+	
 	
 	public void say() {
 		System.out.println(this.name + ": \"Meow\"");
 	}
 	
-	public void setDateOfBirth(int dateOfBirth) {
-		this.dateOfBirth = dateOfBirth;
-	}
 	
-	public int getDateOfBirth() {
-		return dateOfBirth;
-	}
+//	public void setName(String name) {
+//		this.name = name;
+//	}
+//	
+//	public String getName() {
+//		return name;
+//	}
 	
-	public void setCurrentDate(int currentDate) {
-		this.currentDate = currentDate;
-	}
+//	public void setDateOfBirth(int dateOfBirth) {
+//		this.dateOfBirth = dateOfBirth;
+//	}
+//	
+//	public int getDateOfBirth() {
+//		return dateOfBirth;
+//	}
 	
-	public int getCurrentDate() {
-		return currentDate;
-	}
+//	public void setCurrentDate(int currentDate) {
+//		this.currentDate = currentDate;
+//	}
+//	
+//	public int getCurrentDate() {
+//		return currentDate;
+//	}
 	
-	public void setHomeland(String homeland) {
-		this.homeland = homeland;
-	}
-	
-	public String getHomeland() {
-		return homeland;
-	}
+//	public void setHomeland(String homeland) {
+//		this.homeland = homeland;
+//	}
+//	
+//	public String getHomeland() {
+//		return homeland;
+//	}
 	
 	public void setMeatEaten(int meatEaten) {
 		this.meatEaten = meatEaten;
@@ -62,8 +79,12 @@ public class Lion {
 		System.out.println(this.name + " прибыл из " + this.homeland);
 	}
 	
-	public void eat() {
-		System.out.println(this.name + " сегодня съел " + this.meatEaten + " килограммов мяса");
+	public void eat() throws NegativeValueException {
+		if (this.meatEaten < 0) {
+			throw new NegativeValueException("Значение meatEaten не может быть отрицательным");
+		} else {
+			System.out.println(this.name + " сегодня съел " + this.meatEaten + " килограммов мяса");
+		}
 	}
 	
 	public void copulate() {

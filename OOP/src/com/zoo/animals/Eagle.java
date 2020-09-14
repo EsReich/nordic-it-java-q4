@@ -1,49 +1,64 @@
 package com.zoo.animals;
 
-public class Eagle {
+public class Eagle extends Animal implements Flyable, Diveable {
 
-	private String name;
-	private int dateOfBirth;
-	private int currentDate;
-	private String homeland;
-	private int altitude;
+//	private String name;
+//	private int dateOfBirth;
+//	private int currentDate;
+//	private String homeland;
+	private int altitude;     // в км;
 	
 	
-	public void setName(String name) {
-		this.name = name;
+	public Eagle() {
+		super();
 	}
 	
-	public String getName() {
-		return name;
+	public Eagle(String name, int dateOfBirth, int currentDate, String homeland, int altitude) {
+		super(name, dateOfBirth, currentDate, homeland);
+//		this.name = name;
+//		this.dateOfBirth = dateOfBirth;
+//		this.currentDate = currentDate;
+//		this.homeland = homeland;
+		this.altitude = altitude;
 	}
+	
 	
 	public void say() {
 		System.out.println(this.name + ": \"Caw-caw!\"");
 	}
 	
-	public void setDateOfBirth(int dateOfBirth) {
-		this.dateOfBirth = dateOfBirth;
-	}
 	
-	public int getDateOfBirth() {
-		return dateOfBirth;
-	}
+//	public void setName(String name) {
+//		this.name = name;
+//	}
+//	
+//	public String getName() {
+//		return name;
+//	}
 	
-	public void setCurrentDate(int currentDate) {
-		this.currentDate = currentDate;
-	}
+//	public void setDateOfBirth(int dateOfBirth) {
+//		this.dateOfBirth = dateOfBirth;
+//	}
+//	
+//	public int getDateOfBirth() {
+//		return dateOfBirth;
+//	}
 	
-	public int getCurrentDate() {
-		return currentDate;
-	}
+//	public void setCurrentDate(int currentDate) {
+//		this.currentDate = currentDate;
+//	}
+//	
+//	public int getCurrentDate() {
+//		return currentDate;
+//	}
 	
-	public void setHomeland(String homeland) {
-		this.homeland = homeland;
-	}
-	
-	public String getHomeland() {
-		return homeland;
-	}
+//	public void setHomeland(String homeland) {
+//		this.homeland = homeland;
+//	}
+//	
+//	public String getHomeland() {
+//		return homeland;
+//	}
 	
 	public void setAltitude(int altitude) {
 		this.altitude = altitude;
