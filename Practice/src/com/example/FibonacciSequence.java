@@ -2,7 +2,7 @@ package com.example;
 
 import java.util.Scanner;
 
-public class fibonacciSequence {
+public class FibonacciSequence {
 
 	public static int seq(int index) {
 		int res = 0;
