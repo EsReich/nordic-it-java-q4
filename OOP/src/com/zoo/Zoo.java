@@ -19,8 +19,10 @@ import com.zoo.exception.UnnamedAnimalException;
 
 public class Zoo {
 
-	public static void main(String[] args) throws NonexistentAviaryException, AviaryIndexOutOfBoundsException {
+	public static void main(String[] args) {
 
+		
+		System.out.println("Добро пожаловать в наш адский цирк-шапито!");
 		
 		var wolf = new Wolf("Balto", 2000, 2020, "Canada", 6);
 		var tiger = new Tiger("Sherkhan", 1999, 2020, "India", 3.5f);
@@ -35,12 +37,14 @@ public class Zoo {
 		var girafEx = new Giraffe();
 		
 		
+		System.out.println("Прошу знакомиться с первым его обитателем: волчарой!");
 		wolf.say();
 		wolf.announceAge();
 		wolf.announceHomeland();
 		wolf.sleep();
 		wolf.run();
 		
+		System.out.println("А это наша тигрила!");
 		tiger.say();
 		tiger.announceAge();
 		tiger.announceHomeland();
@@ -59,6 +63,7 @@ public class Zoo {
 			System.out.println("Final block");
 		}
 		
+		System.out.println("Здоровенный лев прямиком из ада!");
 		lion.say();
 		lion.announceAge();
 		lion.announceHomeland();
@@ -71,6 +76,7 @@ public class Zoo {
 		}
 		lion.copulate();
 		
+		System.out.println("Следующий экземпляр: грустное длинношеее животное с озера Чад!");
 		giraf.say();
 		giraf.announceAge();
 		giraf.announceHomeland();
@@ -83,24 +89,29 @@ public class Zoo {
 			System.out.println("Final block");
 		}
 		
+		System.out.println("В углу клетки притаился слоненок:");
 		elef.say();
 		elef.announceAge();
 		elef.announceHomeland();
 		elef.dreamFly();
 		elef.wise();
 		
+		System.out.println("А это американский орлан-белохвост "
+				+ "(прямо как на пакетиках с растворимым кофе):");
 		eagle.say();
 		eagle.announceAge();
 		eagle.announceHomeland();
 		eagle.fly();
 		eagle.dive();
 		
+		System.out.println("Люся, местная билетёрша:");
 		chim.say();
 		chim.announceAge();
 		chim.announceHomeland();
 		chim.bmI();
 		chim.dream();
 		
+		System.out.println("И, наконец, обитатели кунсткамеры - бракованые животные:");
 		try {
 			tigerEx.grow();
 		} catch (NegativeValueException e) {
@@ -133,9 +144,77 @@ public class Zoo {
 		}
 		
 		
-//		Вольеры:
+		System.out.println("Манипуляции с вольерами:");
 		
+		var zoo = new HashMap<Integer, HashSet<Animal>>();
+		var aviary0 = new HashSet<Animal>();
+		var aviary1 = new HashSet<Animal>();
+		var aviary2 = new HashSet<Animal>();
+		
+		zoo.put(0, aviary0);
+		zoo.put(1, aviary1);
+		zoo.put(2, aviary2);
+		
+		try {
+			addToAviary(zoo, 0, wolf);
+			addToAviary(zoo, 0, tiger);
+			addToAviary(zoo, 0, chim);
+			addToAviary(zoo, 0, chim);
+			addToAviary(zoo, 0, giraf);
+			addToAviary(zoo, 0, elef);
+			addToAviary(zoo, 0, lion);
+			addToAviary(zoo, 0, eagle);
+			aviary0.remove(wolf);
+			addToAviary(zoo, 0, eagle);
+			addToAviary(zoo, 1, lionEx);
+			addToAviary(zoo, 2, girafEx);
+			addToAviary(zoo, 9, tigerEx);
+		} catch (NonexistentAviaryException e) {
+			System.out.println(e.getMessage());
+		} finally {
+			System.out.println("Final block");
+		}
+		
+		aviary0.remove(wolf);
+		
+		System.out.println(aviary0.size());
+		System.out.println(aviary1.size());
+		System.out.println(aviary2.size());
 		
 	}
-
+	
+	
+	public static void addNewAnimal(HashSet<Animal> aviary, Animal animal) 
+			throws AnimalCloneException, AviaryIndexOutOfBoundsException {
+		
+		if (aviary.contains(animal)) {
+			throw new AnimalCloneException(animal.getName() + " уже содержится в вольере!");
+		} else if (aviary.size() > 4) {
+			throw new AviaryIndexOutOfBoundsException("Не удалось добавить " 
+		+ animal.getName() + ". Вольер переполнен!");
+		} else {
+			aviary.add(animal);
+		}
+		
+	}
+	
+	
+	public static void addToAviary(HashMap<Integer, HashSet<Animal>> zoo, Integer aviaryNum, Animal animal) 
+			throws NonexistentAviaryException {
+		
+		if (aviaryNum < 0 || aviaryNum > 2) {
+			throw new NonexistentAviaryException("Вольера с номером " + aviaryNum + " не существует!");
+		} else {
+			try {
+				addNewAnimal(zoo.get(aviaryNum), animal);
+				System.out.println(animal.getName() + " успешно добавлен в вольер");
+			} catch (AnimalCloneException | AviaryIndexOutOfBoundsException e) {
+				System.out.println(e.getMessage());
+			} finally {
+				System.out.println("Final block");
+			}
+		}
+	}
+	
+	
 }
