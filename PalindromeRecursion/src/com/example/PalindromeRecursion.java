@@ -2,7 +2,7 @@ package com.example;
 
 public class PalindromeRecursion {
 
-	// Проверка, является ли слово палиндромом:
+	// РџСЂРѕРІРµСЂРєР°, СЏРІР»СЏРµС‚СЃСЏ Р»Рё СЃР»РѕРІРѕ РїР°Р»РёРЅРґСЂРѕРјРѕРј:
 	public static boolean isPalindrome1(String str) {
 		var line = new String("");
 		for (var i = str.length() - 1; i >= 0; i--) {
@@ -31,12 +31,12 @@ public class PalindromeRecursion {
 	
 	public static void main(String[] args) {
 		
-		var str = "топот";
+		var str = "пїЅпїЅпїЅпїЅпїЅ";
 		var str1 = "12321";
 		var str2 = "123456789";
-		var str3 = "арозаупаланалапуазора";
-		var str4 = "доход";
-		var str5 = "притяжение";
+		var str3 = "пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ";
+		var str4 = "пїЅпїЅпїЅпїЅпїЅ";
+		var str5 = "пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ";
 		
 		System.out.println(isPalindrome1(str));
 		System.out.println(isPalindrome1(str1));

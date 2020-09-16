@@ -5,6 +5,9 @@ import java.util.Random;
 
 public class ListProblem {
 
+//	Нахождение максимального и минимального чисел в списке, 
+//	а также расчет среднего арифметического.
+	
 	public static void main(String[] args) {
 		var list = new ArrayList <Integer>();
 		

@@ -2,7 +2,7 @@ package com.example;
 
 public class Inversion {
 	
-	// Переворачивание массива:
+	// РџРµСЂРµРІРѕСЂР°С‡РёРІР°РЅРёРµ РјР°СЃСЃРёРІР°:
 	public static int[] invert(int[] mass) {
 		for (var i = 0; i < 4; i++) {
 			var inter = 0;
