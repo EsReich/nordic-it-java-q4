@@ -8,7 +8,7 @@ public class PalindromeRecursion {
 		for (var i = str.length() - 1; i >= 0; i--) {
 			line += str.charAt(i);
 		}
-		if (line.equals(str)) {
+		if (line.equalsIgnoreCase(str)) {
 			System.out.println(str);
 			System.out.println(line);
 			return true;
@@ -31,12 +31,12 @@ public class PalindromeRecursion {
 	
 	public static void main(String[] args) {
 		
-		var str = "�����";
+		var str = "топот";
 		var str1 = "12321";
 		var str2 = "123456789";
-		var str3 = "���������������������";
-		var str4 = "�����";
-		var str5 = "����������";
+		var str3 = "арозаупаланалапуазора";
+		var str4 = "доход";
+		var str5 = "притяжение";
 		
 		System.out.println(isPalindrome1(str));
 		System.out.println(isPalindrome1(str1));
