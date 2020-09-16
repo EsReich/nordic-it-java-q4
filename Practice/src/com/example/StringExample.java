@@ -50,6 +50,10 @@ public class StringExample {
 		System.out.println(str.substring(0, str.length() / 2));
 		//stringName.substring(int beginIndex, int endIndex) -- возвращает соответствующий...
 		//...кусок строки;
+		
+		System.out.println("DDDDDDDDDDDDDDDDDDDDDDD");
+		var ss = new String();          // создание пустой строки (empty, но не null!);
+		System.out.println(ss.length());
 	}
 
 }
