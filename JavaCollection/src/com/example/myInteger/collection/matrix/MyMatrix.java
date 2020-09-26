@@ -6,9 +6,9 @@ import java.util.Random;
 
 public class MyMatrix implements Iterable<Integer> {
 	
-	private static int length;
-	private static int width;
-	private static int[][] matrix;
+	private int length;
+	private int width;
+	private int[][] matrix;
 	
 	public MyMatrix() {
 	
@@ -152,7 +152,7 @@ public class MyMatrix implements Iterable<Integer> {
 		
 	}
 	
-	public static int getElem(int pos) {
+	public int getElem(int pos) {
 		var minX = 0;
 		var maxX = length - 1;
 		var minY = 0;
