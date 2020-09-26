@@ -7,8 +7,8 @@ public class ListProblem {
 	// Удаление повторяющихся элементов из списка:
 	public static void func(ArrayList <Integer> list) {
 		var counter = 0;
-		for (var i = 0; i <= list.size() - 1; i++) {
-			for (var j = 0; j <= list.size() - 1; j++) {
+		for (var i = 0; i < list.size(); i++) {
+			for (var j = 0; j < list.size(); j++) {
 				if (list.get(i) == list.get(j)) {
 					counter++;
 				}
