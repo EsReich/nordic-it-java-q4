@@ -13,7 +13,7 @@ public class FactRecursion {
 		return res;
 	}
 	
-	public static int factRecIf(int num) {
+	public static int factRecIf(int num) { // true recursion?
 		var res = 0;
 		
 		if (num == 0) {
